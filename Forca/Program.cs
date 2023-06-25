@@ -41,7 +41,7 @@ while (Vidas > 0 && letras.ToString().Contains("_"))
 {
     string entrada = Console.ReadLine().ToUpper();
 
-    while (entrada.Length != 1 || !Regex.IsMatch(entrada, @"^[a-zA-Z]+$"))
+    while (entrada.Length != 1 || !Regex.IsMatch(entrada, @"^[\p{L}]+$"))
     {
         Console.WriteLine("Entrada inválida. Digite uma única letra:");
         entrada = Console.ReadLine().ToUpper();
